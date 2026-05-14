@@ -1,0 +1,29 @@
+# Data files
+data/**/*.fasta
+data/**/*.fastq
+data/**/*.bin
+data/**/*.model
+data/**/*.h5
+data/**/*.npz
+data/**/*.npy
+data/**/*.pkl
+data/**/*.joblib
+data/**/*.pth
+data/**/*.pt
+data/**/*.ckpt
+
+# Binary/model files
+*.bin
+*.model
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.venv/
+venv/
