@@ -1,0 +1,9 @@
+#torch>=2.1.0dev
+#lightning@git+https://github.com/Lightning-AI/lightning@master
+jsonargparse[signatures]  # CLI
+pandas
+pyarrow
+tokenizers
+sentencepiece
+wandb
+zstd

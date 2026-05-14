@@ -1,0 +1,9 @@
+vocab_sizes:
+  default: 221
+
+model_paths:
+  encoder-MLM:
+    eg: "Protein-encoder-MLMv1-eg-d0.0-s1024-nc32-nw8_uniref5090_mlm0.15_smv1-fromPretrained-2024_03_31_10_13_42"
+
+root_paths:
+  encoder-MLM: '/public_new/taoshen/biolm_ckpts/'

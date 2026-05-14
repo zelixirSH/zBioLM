@@ -1,0 +1,82 @@
+vocab_sizes:
+  default: 221
+
+model_paths:
+
+  lt5t5_pipeline_new:
+    es:                  "new_pipline_llama-t5-es"
+    es-ncs:              "new_pipline_llama-t5-es-d0.15_ncs_TinyLlamaBin"
+    es-ncs-sf:           "new_pipline_llama-t5-es-d0.15-nc64_ncs_TinyLlamaBin_sf-files"
+    eg-ncs-sf:           "new_pipline_llama-t5-eg-d0.15-nc64_ncs_TinyLlamaBin_sf-files"
+    es-ncs-sfv2:         "new_pipline_llama-t5-es-d0.15-nc64_ncs_TinyLlamaBin_sfv2_sf-files"
+    es-dp0-new_db_v1.1:  "new_pipline_llama-t5-es-d0.0-nc64_new_db_v1.1"
+    eg-dp0-new_db_v1.1:  "new_pipline_llama-t5-eg-d0.0-nc64_new_db_v1.1"
+    elx-dp0-new_db_v1.1: "new_pipline_llama-t5-elx-d0.0-nc64_new_db_v1.1"
+
+  lt5t5_new_dataiter:
+    es-v1.2:          "new-dataiter-llama-t5-es-d0.0-nc32-nw8_new_db_v1.2-2023_12_19_21_38_34"
+    es-v1.2.0:        "new-dataiter-llama-t5-es-d0.0-nc32-nw8_new_db_v1.2.0-2023_12_19_23_12_38"
+    es-v1.3:          "new-dataiter-llama-t5-es-d0.0-nc32-nw8_new_db_v1.3-2023_12_19_21_57_12"
+    es-ss_0.8:        "new-dataiter-llama-t5-es-d0.0-nc32-nw8_ss_0.8-2023_12_19_21_55_17"
+    es-ss_1.0:        "new-dataiter-llama-t5-es-d0.0-nc32-nw8_ss_1.0-2023_12_19_22_03_31"
+    es-ss_0.8_mlm0.3: "new-dataiter-llama-t5-es-d0.0-nc32-nw8_ss_0.8_mlm0.3-2023_12_20_10_08_32"
+    es-ss_0.8_mlm0.5: "new-dataiter-llama-t5-es-d0.0-nc32-nw8_ss_0.8_mlm0.5_smv1-2023_12_20_23_22_38"
+    es-ss_0.8_smv2:   "new-dataiter-llama-t5-es-d0.0-nc32-nw8_ss_0.8_mlm0.15_smv2-2023_12_20_13_22_06"
+    es-ss_0.8_smv3:   "new-dataiter-llama-t5-es-d0.0-nc32-nw8_ss_0.8_mlm0.15_smv3-2023_12_20_13_23_35"
+    es-dp0.15_v1.3:             "new-dataiter-llama-t5-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv1-2023_12_21_11_13_29"
+    es-dp0.15_v1.3_smv3:        "new-dataiter-llama-t5-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv3-2023_12_21_15_42_00"
+    es-dp0.15_ss_0.8_smv3:      "new-dataiter-llama-t5-es-d0.15-nc32-nw8_ss_0.8_mlm0.15_smv3-2023_12_22_00_24_10"
+    es-dp0.15_ss_1.0_smv3:      "new-dataiter-llama-t5-es-d0.15-nc32-nw8_ss_1.0_mlm0.15_smv3-2023_12_22_09_09_09"
+    es-dp0.15_v1.3_smv3_mlm0.5: "new-dataiter-llama-t5-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.5_smv3-2023_12_22_10_53_15"
+    es-dp0.15_v1.3.0_smv3:      "new-dataiter-llama-t5-es-d0.15-nc32-nw8_new_db_v1.3.0_mlm0.15_smv3-2023_12_22_09_19_26"
+    es-dp0.15_v1.3_smv4_mlm0.5: "new-dataiter-llama-t5-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.5_smv4-2023_12_23_10_21_21"
+    es-dp0.15_v1.4_smv3_mlm0.5: "new-dataiter-llama-t5-es-d0.15-nc32-nw8_new_db_v1.4_mlm0.5_smv4-2023_12_23_10_33_36"
+
+  lt5t5_old_ft_new: # finetune from old dataiter to new dataiter, /public_new/taoshen/data/mars_fm_data/archived/new_pipeline/old_dataiter/new_pipline_llama-t5-eg-d0.0-nc64_new_db_v1.1/iter-175000-ckpt.pth
+    es-dp0.15_v1.3_smv4_mlm0.5:  "new-dataiter-t5-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.5_smv4-fromPretrained2023_12_24_18_33_32"
+    eg-dp0.15_v1.3_smv4_mlm0.5:  'new-dataiter-t5-eg-d0.15-nc32-nw8_new_db_v1.3_mlm0.5_smv4-fromPretrained2023_12_24_22_13_22'
+    elx-dp0.15_v1.3_smv4_mlm0.5: "new-dataiter-t5-elx-d0.15-nc32-nw8_new_db_v1.3_mlm0.5_smv4-fromPretrained2023_12_24_18_41_44"
+
+  encoderT5-MLM:   # finetune from pretrained T5 model, /public_new/taoshen/data/mars_fm_data/archived/new_pipeline/old_dataiter/
+    es-dp0.15_v1.3_smv4_mlm0.15_ft:  "new-dataiter-encoderT5-MLMv4-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-fromPretrained2023_12_28_10_28_57"
+    eg-dp0.15_v1.3_smv4_mlm0.15_ft:  "new-dataiter-encoderT5-MLMv4-eg-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-fromPretrained2023_12_28_10_21_10"
+    elx-dp0.15_v1.3_smv4_mlm0.15_ft: "new-dataiter-encoderT5-MLMv4-elx-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-fromPretrained2023_12_28_11_26_51"
+
+  encoder-MLM:
+    es-dp0.15_v1.3_smv4_mlm0.15:              "new-dataiter-encoder-MLMv4-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-2023_12_26_11_58_58"
+    l-dp0.15_v1.3_smv4_mlm0.15-<MASK-BUG>:    "new-dataiter-encoder-MLMv4-l-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-2023_12_31_15_21_20" # MASK-BUG
+
+  encoder-MLM_old_ft_new:  # fintuned from pretrained MLM model
+    #tokenizer is changed (embedding layer is reinitialized)
+    l-50k-<MASK-BUG>: "new-dataiter-encoder-MLMv4-l-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-fromPretrained2024_01_01_12_35_22" # MASK-BUG
+    l-50k:            "new-dataiter-encoder-MLMv4-l-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-fromPretrainedAmsk2024_01_02_08_37_50"
+
+  encoder-MLM-MOE:
+    es:                     "new-dataiter-encoder-MLMv4-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-MoEDemoBaLossXn2023_12_28_18_09_47"
+    es-dp0.0-expert16_4:    "new-dataiter-encoder-MLMv4-es-d0.0-nc32-nw8_new_db_v1.3_mlm0.15_smv4-MoEDemoBaLossXn-ne16-4-Amsk-2024_01_08_10_45_03"
+    es-dp0.0-expert32_4:    "new-dataiter-encoder-MLMv4-es-d0.0-nc32-nw8_new_db_v1.3_mlm0.15_smv4-MoEDemoBaLossXn-ne32-4-Amsk-2024_01_08_10_55_56"
+    l-old_ft:               "new-dataiter-encoder-MLMv4-l-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-fromPretrainedMoEDemoBaLossXnAmsk2024_01_02_20_48_02"
+    l-dp0.15-50k-dp0.0-50k: "new-dataiter-encoder-MLMv4-l-d0.0-nc32-nw8_new_db_v1.3_mlm0.15_smv4-fromPretrained-MoEDemoBaLossXn-Amsk-2024_01_04_09_53_23"
+
+  encoder-MLM_online:
+    es:                     "new-dataiter-encoder-MLMv4-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-Amsk2024_01_03_04_48_55"
+    elx:                    "new-dataiter-encoder-MLMv4-elx-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-Amsk2024_01_02_23_51_21"
+    lxx:                    "new-dataiter-encoder-MLMv4-lxx-d0.0-nc8-nw8_new_db_v1.3_mlm0.15_smv4-mbs16sl1024-Amsk-2024_02_17_04_08_17"
+    lxxx:                   "new-dataiter-encoder-MLMv4-lxxx-d0.0-nc8-nw8_new_db_v1.3_mlm0.15_smv4-mbs4sl1024-Amsk-2024_02_10_18_13_01"
+
+  encoder-MLM-MOE_online:
+    es:                       "new-dataiter-encoder-MLMv4-es-d0.15-nc32-nw8_new_db_v1.3_mlm0.15_smv4-MoEDemoBaLossXnAmsk2024_01_04_00_36_55"
+    es-dp0.0:                 "new-dataiter-encoder-MLMv4-es-d0.0-nc32-nw8_new_db_v1.3_mlm0.15_smv4-MoEDemoBaLossXnAmsk2024_01_08_00_24_01"
+    elx-dp0.15-75k-dp0.0-50k: "new-dataiter-encoder-MLMv4-elx-d0.0-nc32-nw8_new_db_v1.3_mlm0.15_smv4-fromPretrainedMoEDemoBaLossXnAmsk2024_01_08_00_43_56"
+
+root_paths:
+  lt5t5_pipeline_new:     "/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/old_dataiter"
+  lt5t5_new_dataiter:     "/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/new_dataiter"
+  lt5t5_old_ft_new:       "/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/old_ft_new/"
+  encoder-MLM:            "/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/encoder-MLM"
+  encoderT5-MLM:          "/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/MLMv4"
+  encoder-MLM-MOE:        "/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/encoder-MLM-MOE"
+  encoder-MLM_old_ft_new: '/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/encoder-MLM_old_ft_new/'
+  encoder-MLM_online:     "/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/encoder-MLM_online"
+  encoder-MLM-MOE_online: "/public_new/taoshen/data/mars_fm_data/archived/new_pipeline/encoder-MLM-MOE_online"
+  encoder-MLM_demo:       '/public_new/taoshen/data/mars_fm_data/archived/ss_0.8_half/'
